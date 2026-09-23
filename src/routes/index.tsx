@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Download, Mail, Linkedin, MapPin, ArrowUpRight, Lock } from "lucide-react";
+import { Download, Mail, Linkedin, MapPin, ArrowUpRight, Lock, Menu, X } from "lucide-react";
 
 const TITLE = "Ricardo Manuel Español Rowe — AI Operations & Automation Specialist";
 const DESCRIPTION =
@@ -99,11 +100,12 @@ function Section({
 }
 
 function Index() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-6 px-6 py-4">
-          <a href="#top" className="font-serif text-base font-semibold">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3 md:px-6 md:py-4">
+          <a href="#top" className="min-w-0 truncate font-serif text-base font-semibold">
             Ricardo Español Rowe
           </a>
           <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
@@ -113,14 +115,39 @@ function Index() {
               </a>
             ))}
           </nav>
-          <a
-            href={CV_URL}
-            download
-            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            <Download className="size-4" /> CV
-          </a>
+          <div className="flex shrink-0 items-center gap-2">
+            <a
+              href={CV_URL}
+              download
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:px-4"
+            >
+              <Download className="size-4" /> CV
+            </a>
+            <button
+              type="button"
+              aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((o) => !o)}
+              className="inline-flex size-9 items-center justify-center rounded-md border border-border bg-surface text-foreground md:hidden"
+            >
+              {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
+          </div>
         </div>
+        {menuOpen && (
+          <nav className="border-t border-border bg-background px-5 py-2 md:hidden">
+            {nav.map((n) => (
+              <a
+                key={n.href}
+                href={n.href}
+                onClick={() => setMenuOpen(false)}
+                className="block border-b border-border/60 py-3 text-base last:border-b-0 hover:text-primary"
+              >
+                {n.label}
+              </a>
+            ))}
+          </nav>
+        )}
       </header>
 
       <main id="top">
