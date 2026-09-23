@@ -66,8 +66,8 @@
 
 :root {
   --radius: 0.5rem;
-  --font-serif: "Source Serif 4", Georgia, serif;
-  --font-sans: "Public Sans", system-ui, sans-serif;
+  --font-serif: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
   --background: oklch(0.985 0.003 106);
   --foreground: oklch(0.22 0.02 220);
   --surface: oklch(1 0 0);
