@@ -118,7 +118,8 @@ function Index() {
           <div className="flex shrink-0 items-center gap-2">
             <a
               href={CV_URL}
-              download
+              target="_blank"
+              rel="noopener"
               className="inline-flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:px-4"
             >
               <Download className="size-4" /> CV
@@ -174,7 +175,8 @@ function Index() {
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
                 href={CV_URL}
-                download
+                target="_blank"
+                rel="noopener"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
                 <Download className="size-4" /> Descargar CV
@@ -285,7 +287,8 @@ function Index() {
           </ul>
           <a
             href={CV_URL}
-            download
+            target="_blank"
+            rel="noopener"
             className="mt-8 inline-flex items-center gap-2 rounded-md border border-primary/30 bg-surface px-5 py-3 text-sm font-medium text-primary transition-colors hover:bg-secondary"
           >
             <Download className="size-4" /> Ver CV completo
