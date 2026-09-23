@@ -4,7 +4,7 @@ import { Download, Mail, Linkedin, MapPin, ArrowUpRight, Lock, Menu, X } from "l
 
 const TITLE = "Ricardo Manuel Español Rowe — AI Operations & Automation Specialist";
 const DESCRIPTION =
-  "Especialista en automatización de procesos con IA en Madrid. 20+ años en operaciones y negocio B2B, con dos herramientas propias en producción construidas con Claude Code.";
+  "Especialista en automatización de procesos con IA en Madrid. 24+ años en operaciones y negocio B2B, con dos herramientas propias en producción construidas con Claude Code.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -206,7 +206,7 @@ function Index() {
           <div className="grid gap-8 md:grid-cols-[1.4fr_1fr]">
             <div className="space-y-5 text-lg leading-relaxed text-foreground/85">
               <p>
-                Más de 20 años de trayectoria en operaciones, atención al cliente y al estudiante, y
+                Más de 24 años de trayectoria en operaciones, atención al cliente y al estudiante, y
                 desarrollo de negocio B2B.
               </p>
               <p>
