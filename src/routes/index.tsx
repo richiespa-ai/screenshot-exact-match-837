@@ -39,23 +39,22 @@ const tools = [
   "Grok API",
   "Google AI Studio",
   "Prompt Engineering",
-  "Automatización No-Code/Low-Code",
-  "Intercom",
 ];
 
 const projects = [
   {
     title: "Herramienta de gestión de bajas y reembolsos",
-    body: "Aplicación web construida desde cero con Claude Code, integrada con PostgreSQL (Data Warehouse institucional) y con control de acceso por 4 roles. Automatiza la validación de solicitudes y el cruce de datos de reembolsos.",
+    body: "Aplicación web construida desde cero con Claude Code, integrada con PostgreSQL (Data Warehouse institucional) y con control de acceso por 4 roles. Automatiza la validación de solicitudes y el cruce de datos de reembolsos, dejando la ejecución final a criterio humano por tratarse de importes sensibles.",
     stats: [
       { k: "En producción", v: "+1 año" },
-      { k: "Volumen", v: "~150 solicitudes/mes" },
+      { k: "Resolución", v: "100% en máx. 3 días (antes, de 2 semanas a 1 mes)" },
+      { k: "Solicitudes de reembolso tramitadas", v: "−60%" },
       { k: "Alcance", v: "Toda la organización" },
     ],
   },
   {
     title: "Sustituto de Intercom impulsado por IA",
-    body: "Web app de atención al alumno con la API de Grok, integrada con el Data Warehouse para personalizar respuestas según el contexto real de cada estudiante.",
+    body: "Web app de atención al alumno con la API de Grok, integrada con el Data Warehouse para personalizar respuestas según el contexto real de cada estudiante. Deriva a un agente humano solo ante consultas fuera de alcance o señales de frustración.",
     stats: [
       { k: "En producción", v: "9 meses" },
       { k: "Volumen", v: "~2.000 tickets/mes" },
@@ -68,12 +67,22 @@ const experience = [
   {
     company: "thePower",
     years: "2020 – 2026",
-    role: "Student Success & Operaciones",
+    role: "Student Success & Operations",
+  },
+  {
+    company: "Genera Asesores Tributarios",
+    years: "2019 – 2025",
+    role: "Responsable Comercial · Asesor Externo",
   },
   {
     company: "Ayming",
     years: "2007 – 2018",
-    role: "Senior Account Manager",
+    role: "Senior Account Manager & Business Development",
+  },
+  {
+    company: "Alico AIG Life",
+    years: "2002 – 2007",
+    role: "Agente de Seguros y Jefe de Equipo",
   },
 ];
 
@@ -169,8 +178,7 @@ function Index() {
               AI Operations &amp; Automation Specialist
             </p>
             <p className="mt-7 max-w-2xl font-serif text-xl leading-relaxed text-foreground/85 md:text-2xl">
-              “No soy un desarrollador teórico de IA — soy el puente entre las necesidades del
-              negocio y la tecnología.”
+              “Hago de puente entre las necesidades del negocio y la tecnología.”
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a
@@ -210,9 +218,14 @@ function Index() {
                 desarrollo de negocio B2B.
               </p>
               <p>
-                En el último año me he especializado en automatización de procesos con IA
-                Generativa: he diseñado y llevado a producción dos herramientas propias con Claude
-                Code, adoptadas por toda mi organización.
+                Desde 2025 me he especializado en automatización de procesos con IA generativa: he
+                diseñado y llevado a producción dos herramientas propias con Claude Code, adoptadas
+                por toda mi organización.
+              </p>
+              <p>
+                Busco un rol de AI Operations o automatización de procesos de negocio
+                (operaciones, back-office, atención al cliente) donde convertir procesos manuales
+                en herramientas con IA que el negocio use a diario.
               </p>
               <p>
                 Actualmente completando el Máster AI Maker &amp; Automatizaciones (thePower Tech
@@ -224,6 +237,7 @@ function Index() {
                 ["Ubicación", "Madrid, España"],
                 ["Disponibilidad", "Inmediata"],
                 ["Modalidad", "Híbrida o remota"],
+                ["Idiomas", "Bilingüe inglés–español"],
                 ["Formación en curso", "Máster AI Maker & Automatizaciones"],
               ].map(([k, v]) => (
                 <div key={k}>
@@ -253,7 +267,7 @@ function Index() {
                   ))}
                 </dl>
                 <p className="mt-6 inline-flex items-center gap-2 text-xs text-muted-foreground">
-                  <Lock className="size-3.5" /> Repositorio disponible próximamente
+                  <Lock className="size-3.5" /> Versión demo en preparación
                 </p>
               </article>
             ))}

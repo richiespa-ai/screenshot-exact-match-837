@@ -77,11 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Ricardo Manuel Español Rowe — AI Operations & Automation Specialist" },
+      {
+        name: "description",
+        content:
+          "Especialista en automatización de procesos con IA en Madrid. 24+ años en operaciones y negocio B2B, con dos herramientas propias en producción construidas con Claude Code.",
+      },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Ricardo Manuel Español Rowe — AI Operations & Automation Specialist" },
+      {
+        property: "og:description",
+        content:
+          "Especialista en automatización de procesos con IA en Madrid. 24+ años en operaciones y negocio B2B, con dos herramientas propias en producción construidas con Claude Code.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
