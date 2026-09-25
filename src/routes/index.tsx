@@ -58,7 +58,6 @@ const projects = [
     stats: [
       { k: "En producción", v: "9 meses" },
       { k: "Volumen", v: "~2.000 tickets/mes" },
-      { k: "Ahorro potencial", v: "~42.000 €/año en licencias" },
     ],
   },
 ];
